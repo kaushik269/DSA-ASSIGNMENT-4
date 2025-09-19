@@ -467,4 +467,6 @@ int main() {
     return 0;
 }*/
 
+//part (B) -> stack using one queue
+
 
