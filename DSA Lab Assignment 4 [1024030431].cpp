@@ -467,5 +467,47 @@ int main() {
     return 0;
 }*/
 
+//part (B) -> using one queue
+
+/*#include<iostream>
+using namespace std;
+
+class Queue{
+    int arr[50];
+    int f,r,capacity;
+public:
+    Queue(int c=50){f=-1;r=-1;capacity=c;}
+    int isEmpty(){return f==-1;}
+    void enqueue(int x){
+        if(r==capacity-1) return;
+        if(f==-1) f=0;
+        arr[++r]=x;
+    }
+    int dequeue(){
+        if(isEmpty()) return -1;
+        int x=arr[f];
+        if(f==r){f=-1;r=-1;}
+        else f++;
+        return x;
+    }
+    int size(){return isEmpty()?0:r-f+1;}
+};
+
+class Stack{
+    Queue q;
+public:
+    void push(int x){
+        q.enqueue(x);
+        for(int i=0;i<q.size()-1;i++) q.enqueue(q.dequeue());
+    }
+    void pop(){q.dequeue();}
+    int top(){return q.isEmpty()?-1:q.dequeue();}
+};
+
+int main(){
+    Stack s; s.push(5); s.push(15);
+    cout<<s.top()<<endl;
+    s.pop(); cout<<s.top()<<endl;
+}*/
 
 
