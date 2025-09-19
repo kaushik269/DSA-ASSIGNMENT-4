@@ -376,6 +376,7 @@ int main() {
 
 
 //ques 5 -> 
-//part (A) -> stack using on queue
+//part (A) -> stack using two queue
+
 
 
